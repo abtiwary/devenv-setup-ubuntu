@@ -50,8 +50,20 @@ fi
 
 # rust
 if [[ ${arg_array[@]} =~ "all" || ${arg_array[@]} =~ "rust" ]]; then
+    echo "install rust"
     curl https://sh.rustup.rs -sSf | sh -s -- -y
-    source "$HOME/.cargo/env"
+    source "${home_dir}/.cargo/env"
 fi
 
-# todo
+# golang
+if [[ ${arg_array[@]} =~ "all" || ${arg_array[@]} =~ "golang" ]]; then
+    echo "install golang"
+    cd ${home_dir}/Downloads
+    wget https://go.dev/dl/go1.21.1.linux-amd64.tar.gz
+    tar -xvzf go1.21.1.linux-amd64.tar.gz
+    sudo mkdir -p /opt/google/
+    sudo mv go /opt/google
+    #echo "export PATH=\$PATH:/opt/google/go/bin" >> ${home_dir}/.zshrc
+    echo "export PATH=\$PATH:/opt/google/go/bin" >> ${home_dir}/.bashrc
+    source "${home_dir}/.zshrc"
+fi
