@@ -48,5 +48,10 @@ if [[ ${arg_array[@]} =~ "all" || ${arg_array[@]} =~ "neovim" ]]; then
     sudo cp -r man/man1/ /usr/local/man
 fi
 
+# rust
+if [[ ${arg_array[@]} =~ "all" || ${arg_array[@]} =~ "rust" ]]; then
+    curl https://sh.rustup.rs -sSf | sh -s -- -y
+    source "$HOME/.cargo/env"
+fi
 
 # todo
