@@ -31,7 +31,7 @@ if [[ ${arg_array[@]} =~ "all" || ${arg_array[@]} =~ "conda" ]]; then
     chmod a+rwx Miniconda3-latest-Linux-x86_64.sh
     bash Miniconda3-latest-Linux-x86_64.sh -b -p ${home_dir}/miniconda3  
     bash ${home_dir}/miniconda3/bin/activate
-    ${home_dir}/miniconda3/bin/conda install -c conda-forge python-kaleido jupyter seaborn numpy matplotlib plotly scipy pymongo toml tomli tomlkit
+    ${home_dir}/miniconda3/bin/conda install -y -c conda-forge python-kaleido jupyter seaborn numpy matplotlib plotly scipy pymongo toml tomli tomlkit
 fi
 
 
