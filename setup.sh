@@ -19,7 +19,7 @@ export DEBIAN_FRONTEND=noninteractive
 sudo apt update 
 sudo apt install -y apt-transport-https ca-certificates
 sudo update-ca-certificates
-sudo apt install -y build-essential git clang cmake clang clang-tools libclang-dev clang-tidy cppcheck clang-format valgrind less gdb lldb net-tools traceroute whois curl wget exa
+sudo apt install -y build-essential tmux screen git clang cmake clang clang-tools libclang-dev clang-tidy cppcheck clang-format valgrind less gdb lldb net-tools traceroute whois curl wget exa
 git config --global http.sslVerify "false"
 echo insecure >> ${home_dir}/.curlrc
 
